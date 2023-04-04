@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.productos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: auto;
+  padding: 0 20px;
+  background: white;
+
+
+}
+
+ .producto:hover {
+   -webkit-box-shadow: 10px 8px 28px -11px rgba(0,0,0,0.75);
+   -moz-box-shadow: 10px 8px 28px -11px rgba(0,0,0,0.75);
+   box-shadow: 10px 8px 28px -11px rgba(0,0,0,0.75);
+
+
+ }
+
+
+.producto h4 {
+  padding: 5px 10px;
+  color:black ;
+ font-size: smaller;
+}
+
+
+.producto h4 , .producto h3, .producto p {
+  text-align: justify;
+}
+
+.producto img {
+  width: 50%;
+}
+
+.producto {
+  background: white;
+}
+
+.fondo {
+
+  background-color: #D5DBDB ;
+}
+
+
+
+
+
+
+
+

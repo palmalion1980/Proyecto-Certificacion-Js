@@ -1,0 +1,151 @@
+-
+
+    //- ::: Variables PUG ::: -//
+
+    let base = '';
+
+
+//- ::: Include Head & Body ::: -//
+include ../includes/head
+
+
+<section class="slide fade-4" data-title="Homepage" data-name="homepage">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+                <ul class="flex">
+
+                    <li class="fix-8-12 margin-top-desktop-20 margin-top-10 margin-bottom-6">
+
+
+                        <h3 class="smaller roboto weight-9 margin-top-desktop-2" style="line-height: .9em;"  >Conoce Nuestra Tienda</h3>
+
+                        <h2 class="h1 largest roboto weight-9 margin-top-1" style="line-height: .9em;" >FEMINAS</h2>
+
+                        <div style="margin: 0 80px">
+
+                            <p class="smaller weight-6 margin-top-1" id="cities">
+
+
+                            </p>
+
+                        </div>
+
+
+                        <a href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hola%20🇨🇱!,%20Tengo%20algunas%20dudas%20¿me%20podrían%20asesorar?%20😊" class="button small green rounded crop margin-bottom-1 margin-right-1" ><span class='material-icons relative md-24' style="left: -2px; top: 1px">whatsapp</span>Contactame por WhatsApp</a>
+
+
+                    </li>
+
+
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="background youtube" style="background-image:url(https://i3.ytimg.com/vi/1QP6p6U8Qr4/maxresdefault.jpg);" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=1QP6p6U8Qr4', containment:'self', startAt: 1, stopAt: 75, showControls:false, autoPlay:true, loop:true, mute:true, opacity:1, quality:'highres', stopMovieOnBlur:false, remember_last_time: true}"></div>
+
+
+
+</section>
+
+
+<!-- Slide 39 (#39) -->
+<section class="slide fondo " data-title="tienda" data-name="tienda">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+                <h1 class="opens-sans bold margin-bottom-4">Nuestro Catalogo</h1>
+                <div x-data="main()" x-init="fetch(url).then(response => response.json()).then( json => { products = json});">
+
+                    <div class="productos-list">
+
+                        <template x-for="producto in products">
+
+                            <div class="producto">
+
+                                <img x-bind:src="producto.image">
+                                <h4 x-text="producto.title"><h4>
+                                <p x-text="producto.price" class=" bold  text-orange"></p>
+                            </div>
+
+                        </template>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="background" style="background-image:url()"></div>
+</section>
+
+    <section class="slide  crema" data-title="contacto" data-name="contacto">
+        <div class="content">
+            <div class="container">
+                <div class="wrap">
+
+                    <ul class="flex">
+
+                        <li class="fix-8-12 margin-top-desktop-20 margin-top-10 margin-bottom-6">
+
+
+                            <h3 class="smaller roboto weight-9 margin-top-desktop-2" style="line-height: .9em;"  >Contactanos</h3>
+
+                            <h2 class="h1 largest roboto weight-9 margin-top-1" style="line-height: .9em;" >FEMINAS</h2>
+
+                            <div style="margin: 0 80px">
+
+                                <p class="smaller weight-6 margin-top-1" id="cities">
+
+
+                                </p>
+
+                            </div>
+
+
+                            <a href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hola%20🇨🇱!,%20Tengo%20algunas%20dudas%20¿me%20podrían%20asesorar?%20😊" class="button small green rounded crop margin-bottom-1 margin-right-1" ><span class='material-icons relative md-24' style="left: -2px; top: 1px">whatsapp</span>Contactame por WhatsApp</a>
+
+
+                        </li>
+
+
+                        <li class="fix-4-12">
+
+
+                            <div class="pad padding-top-3 shadow selected">
+
+
+                                <h6 class="largest roboto weight-9 opacity-8 padding-top-2" style="line-height: .9em" >LA MODA EN UN SOLO LUGAR</h6>
+                                <h6 class="smaller weight-6 margin-bottom-1 opacity-8" >Ven a nuestra pasarela ...</h6>
+
+                                +form_personalized_attention()
+                            </div>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+              <div class="background" style="background-image:url(assets/img/home/backgrounds/tienda.jpg)"></div>
+</section>
+
+
+
+//- :::  Section of Plugins in this Page ::: -//
++background_youtube()
++alpinesjs_tienda()
+
+
+
+//- :::  Star Footer Content ::: -//
+include ../includes/footer
+
+include ../includes/svg_library
